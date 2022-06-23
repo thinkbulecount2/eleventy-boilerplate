@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ pageLang }}">
+  <head>
+    {% include 'partials/head.liquid' %}
+  </head>
+  <body>
+    <main tabindex="-1" id="main-content">
+      {% block main %}
+        {{ content }}
+      {% endblock %}
+    </main>
+  </body>
+</html>

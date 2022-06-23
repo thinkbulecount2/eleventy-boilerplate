@@ -1,0 +1,20 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    {{ pageTitle }}
+  </title>
+
+<meta name="description" content="{{ pageDescription }}">
+<meta name="keywords" content="{{ pageKeywords }}">
+<base href="{{ config.site.url.base }}">
+
+{% block appHead %}
+  {% if config.site.theme.color %}
+    <meta name="theme-color" content="{{ config.site.theme.color }}">
+  {% endif %}
+  {% if config.meta.webmanifest.filename %}
+    <link rel="manifest" href="{{ config.meta.webmanifest.filename }}">
+  {% endif %}
+{% endblock %}
+
+<link rel="stylesheet" href="/assets/css/style.css">
